@@ -11,3 +11,19 @@ services:
         value: 8000
       - key: PYTHON_VERSION
         value: 3.11.5
+      - key: OPENAI_API_KEY
+        value: your_openai_api_key_here
+      - key: SEARCH_API_KEY
+        value: your_search_api_key_here
+      - key: REDIS_URL
+        value: redis://localhost:6379
+      - key: DATABASE_URL
+        value: sqlite:///./app.db
+      - key: KNOWLEDGE_PATH
+        value: ./knowledge_base
+      - key: MODEL_PATH
+        value: ./storage/models
+  - type: static
+    name: frontend
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
