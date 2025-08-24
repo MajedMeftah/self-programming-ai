@@ -195,6 +195,10 @@ async def improve_endpoint(request: Request, body: CodeImprovementRequest):
             quality_score_after=0.0
         )
 
+@app.post("/CHAT")
+async def chat_endpoint():
+    return {"message": "CHAT endpoint placeholder"}
+
 # باقي ال endpoints تبقى كما هي...
 
 if __name__ == "__main__":
