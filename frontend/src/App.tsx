@@ -29,6 +29,7 @@ export default function App() {
           <nav>
             <ul className="nav-list">
               <li><Link to="/">Home</Link></li>
+              <li><Link to="/chat">Chat</Link></li>
               <li><Link to="/app">App</Link></li>
               <li><Link to="/research">Research</Link></li>
               <li><Link to="/generate">Generate</Link></li>
@@ -40,6 +41,7 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/chat" element={<div><h2>Chat</h2><p>Chat UI coming soon...</p></div>} />
             <Route path="/app" element={<AppPage />} />
             <Route path="/research" element={<ResearchPage />} />
             <Route path="/generate" element={<GeneratePage />} />
